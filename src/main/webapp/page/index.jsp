@@ -122,10 +122,10 @@
 											</div>
 											<div class="add-cart">
 												<button class="btn btn-info btn-detail test">
-													<i class="fa fa-info-circle" aria-hidden="true"></i> Detail
+													<a href="<%=request.getContextPath()%>/page/product.jsp"><i class="fa fa-info-circle" aria-hidden="true"></i> Detail</a>
 												</button>
 												<button class="btn btn-warning btn-cart">
-													<i class="fa fa-shopping-cart"></i> Add to cart
+													<a><i class="fa fa-shopping-cart"></i> Add to cart</a>
 												</button>
 											</div>
 										</div>

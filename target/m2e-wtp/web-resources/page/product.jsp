@@ -276,10 +276,10 @@
 							</div>
 							<div class="add-cart">
 								<button class="btn btn-warning btn-cart">
-									<i class="fa fa-shopping-cart"></i> Add to cart
+									<a><i class="fa fa-shopping-cart"></i> Add to cart</a>
 								</button>
 								<button class="btn btn-danger">
-									<i class="fa fa-usd"></i> Buy now
+									<a href="<%=request.getContextPath()%>/page/checkout.jsp"><i class="fa fa-usd"></i> Buy now</a>
 								</button>
 							</div>
 						</div>

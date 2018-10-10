@@ -113,6 +113,7 @@
                                 
                                   
                                 <div class="form-group">
+                                <span class="glyphicon glyphicon-user"></span>
                                     <label for="email" class="col-md-3 control-label">Email</label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" name="email" placeholder="Email Address">

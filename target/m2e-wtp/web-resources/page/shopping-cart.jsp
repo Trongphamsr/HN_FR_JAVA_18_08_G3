@@ -1,22 +1,22 @@
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
+<title>Shopping cart</title>
+
 <s:include value="/page/common_head.jsp"></s:include>
 
-<!-- Custome css -->
-<link type="text/css" rel="stylesheet" href="css/checkout.css" />
-<link type="text/css" rel="stylesheet" href="css/shopping-cart.css" />
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link type="text/css" rel="stylesheet"
+	href="<%=request.getContextPath()%>/css/checkout.css" />
+<link type="text/css" rel="stylesheet"
+	href="<%=request.getContextPath()%>/css/shopping-cart.css" />
 </head>
 
 <body>
-	<!-- HEADER -->
+	<!-- Header -->
 	<s:include value="/page/header.jsp"></s:include>
-	<!-- /HEADER -->
+	<!-- /Header -->
 
 	<!-- NAVIGATION -->
 	<nav id="navigation">
@@ -78,7 +78,7 @@
 					<td data-th="Product">
 						<div class="row">
 							<div class="col-sm-2 hidden-xs">
-								<img src="img/iphone-xs.png" alt="Iphone-XS"
+								<img src="<%=request.getContextPath() %>/img/iphone-xs.png" alt="Iphone-XS"
 									class="img-responsive" />
 							</div>
 							<div class="col-sm-10  my-auto">
@@ -89,13 +89,15 @@
 							</div>
 						</div>
 					</td>
-					<td data-th="Price" class="data-center"><span>$1.99</span></td>
+					<td data-th="Price" class="data-center"><span
+						class="price-product">1.99</span></td>
 					<td data-th="Quantity" class="data-center"><input
-						type="number" class="form-control text-center" min="1" value="1">
-					</td>
-					<td data-th="Subtotal" class="text-center data-center">1.99</td>
+						type="number"
+						class="form-control text-center input-number-product"
+						onkeydown="return false" min="1" max="5" value="1"></td>
+					<td data-th="Subtotal" class="text-center data-center total">1.99</td>
 					<td class="actions data-center" data-th="">
-						<button class="btn btn-danger btn-sm">
+						<button class="btn btn-danger btn-sm btn-remove-item">
 							<i class="fa fa-trash-o"></i>
 						</button>
 					</td>
@@ -104,24 +106,26 @@
 					<td data-th="Product">
 						<div class="row">
 							<div class="col-sm-2 hidden-xs">
-								<img src="<%=request.getContextPath()%>/img/iphone-xs.png"
-									alt="Iphone-XS" class="img-responsive" />
+								<img src="<%=request.getContextPath() %>/img/iphone-xs.png" alt="Iphone-XS"
+									class="img-responsive" />
 							</div>
 							<div class="col-sm-10  my-auto">
-								<h4 class="nomargin">Iphone-XS Max</h4>
+								<h4 class="nomargin">Iphone-XS</h4>
 								<p>Quis aute iure reprehenderit in voluptate velit esse
 									cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit
 									amet.</p>
 							</div>
 						</div>
 					</td>
-					<td data-th="Price" class="data-center"><span>$1.99</span></td>
+					<td data-th="Price" class="data-center"><span
+						class="price-product">1.99</span></td>
 					<td data-th="Quantity" class="data-center"><input
-						type="number" class="form-control text-center" min="1" value="1">
-					</td>
-					<td data-th="Subtotal" class="text-center data-center">1.99</td>
+						type="number"
+						class="form-control text-center input-number-product"
+						onkeydown="return false" min="1" max="5" value="1"></td>
+					<td data-th="Subtotal" class="text-center data-center total">1.99</td>
 					<td class="actions data-center" data-th="">
-						<button class="btn btn-danger btn-sm">
+						<button class="btn btn-danger btn-sm btn-remove-item">
 							<i class="fa fa-trash-o"></i>
 						</button>
 					</td>
@@ -137,7 +141,7 @@
 					<td colspan="2" class="hidden-xs"></td>
 					<td class="hidden-xs text-center">
 						<div>
-							<strong>Total</strong> <strong class="total-price">$1.99</strong>
+							<strong>Total</strong> <strong class="total-price">1.99</strong>
 						</div>
 					</td>
 					<td><a href="#" class="btn btn-success btn-block">Checkout
@@ -153,9 +157,10 @@
 
 		<!-- /container -->
 	</div>
-
 	<!-- Footer -->
 	<s:include value="/page/common_footer.jsp"></s:include>
 	<!-- /Footer -->
+	<!-- Custom js -->
+	<script src="<%=request.getContextPath()%>/js/shopping-cart.js"></script>
 </body>
 </html>

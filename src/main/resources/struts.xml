@@ -7,9 +7,47 @@
 
 	<constant name="struts.devMode" value="true" />
 
-	<package name="struts2-app" extends="struts-default">
-		<action name="">
-			<result type="redirect">/page/index.jsp</result>
+	<package name="default" extends="json-default">
+
+		<action name="registerMember"
+			class="com.fsoft.project.action.RegisterAction">
+			<result name="REGISTER" type="json"></result>
+		</action>
+
+
+
+		<!-- <action name="updateuser" class="org.websparrow.action.UpdateAction"> 
+			<result name="UPDATE" type="json"></result> </action> <action name="deleteuser" 
+			class="org.websparrow.action.DeleteAction"> <result name="DELETE" type="json"></result> 
+			</action> -->
+	</package>
+
+
+
+	<package name="helloworld" extends="struts-default">
+
+		<action name="registerCategory"
+			class="com.fsoft.project.action.RegisterCategoryAction"
+			method="execute">
+			<result name="REGISTER">addCategory.jsp</result>
+		</action>
+		
+		<action name="allCategory"
+			class="com.fsoft.project.action.AllCategoryAction"
+			method="execute">
+			<result name="ALLCATEGORY">allCategory.jsp</result>
+		</action>
+		
+		<action name="deleteCategory"
+			class="com.fsoft.project.action.DeleteCategoryAction"
+			method="execute">
+			<result name="DELETECATEGORY">deleteCategory.jsp</result>
+		</action>
+		
+		<action name="dupdateCategory"
+			class="com.fsoft.project.action.UpdateCategoryAction"
+			method="execute">
+			<result name="UPDATECATEGORY">updateCategory.jsp</result>
 		</action>
 	</package>
 

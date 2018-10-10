@@ -13,7 +13,7 @@
 			</ul>
 			<ul class="header-links pull-right">
 				<li><a href="#"><i class="fa fa-dollar"></i> VND</a></li>
-				<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+				<li><a href="<%=request.getContextPath()%>/page/login.jsp"><i class="fa fa-user-o"></i> My Account</a></li>
 			</ul>
 		</div>
 	</div>
@@ -28,7 +28,7 @@
 				<!-- LOGO -->
 				<div class="col-md-3">
 					<div class="header-logo">
-						<a href="#" class="logo">JAVA 1808</a>
+						<a href="<%=request.getContextPath() %>/page/index.jsp" class="logo">JAVA 1808</a>
 					</div>
 				</div>
 				<!-- /LOGO -->
@@ -50,7 +50,7 @@
 
 						<!-- Cart -->
 						<div>
-							<a href="#" id="cart"> <i class="fa fa-shopping-cart"></i> <span>Your
+							<a href="<%=request.getContextPath() %>/page/shopping-cart.jsp" id="cart"> <i class="fa fa-shopping-cart"></i> <span>Your
 									Cart</span>
 								<div id="cartNumber" class="qty">0</div>
 							</a>
